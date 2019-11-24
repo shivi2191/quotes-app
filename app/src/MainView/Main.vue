@@ -46,6 +46,7 @@ export default {
     deleteClickedItem(index) {
       if (!isNaN(index)) {
         this.Quotes.splice(index, 1);
+        this.dummyArray.splice(index, 1);
         this.arrLength = this.Quotes.length;
         QuoteBus.$emit("arrLength", this.arrLength);
       }
